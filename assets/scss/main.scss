@@ -43,7 +43,7 @@ a{
     color: inherit;
     text-decoration: none;
 }
- 
+
 li{
     list-style: none;
 }
@@ -63,7 +63,7 @@ li{
     &__wrapper{
         padding: 0 140px 0 132px;
         
-        @media (max-width: 375px) {
+        @media (max-width: 376px) {
             padding: 0;
         }
     }
@@ -72,6 +72,9 @@ li{
         display: flex;
         justify-content: flex-end;
         padding-top: 100px;
+        @media (max-width: 376px){
+            padding-top: 50px;
+        }
     }
 
     &__landing{
@@ -158,6 +161,7 @@ li{
         display: none;
         @media (max-width:376px) {
             display: block;
+            margin-right: 37px;
         }
     }
 }
@@ -230,11 +234,14 @@ li{
 .program{
     background-color: $alternate-bg;
     padding-bottom: 103px;
+    height: 2300px;
+    @media (max-width: 376px){
+        height: 3000px;
+    }
     &__title{
         font-size: 80px;
         font-weight: 600;
         margin-bottom: 27px;
-
         @media (max-width: 376px) {
             font-size: 40px;
         }
@@ -265,14 +272,25 @@ li{
         }
     }
     &__img{
+        width: 644px;
+        position: absolute;
+        left: 0;
+        @media (max-width: 376px){
+            width: calc(100% - 20px);
+
+        }
+
     }
     &__cost{
         margin-left: 37px;
         padding: 117px 0 80px 73px;    
         background-color: $base-bg;
+        height: 1200px;
         @media (max-width: 376px) {
             margin-left: 17px;
             padding-left: 30px;  
+            height: 2200px;
+
         }
         
         &__buy{
@@ -336,10 +354,96 @@ li{
         }
     }
 }
+.course{
+
+
+    &-result{
+        float: right;
+        margin-right: 120px;
+        @media (max-width: 376px){
+            float: none;
+            margin-right: 0;
+        }
+        &__title{
+            line-height: 60px;  
+            margin-bottom: 20px;
+        }
+
+        &__list{
+            gap: 10px;
+            margin-bottom: 40px;
+
+            &__item{
+                max-width: 600px;
+            }
+            &__item:before{
+                line-height: 150%;
+                @media (max-width: 376px) {
+                    line-height: 50%;
+                }
+            }
+        }
+
+    }
+    &-other{
+        padding-top: 80px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        max-width: 560px;
+        float: right;
+        margin-right: 130px;
+
+        @media (max-width: 376px){
+            margin-right: 0;
+        }
+        margin-left: 17px;
+        gap: 10px;
+        &__link{
+            color: #3C2A2A;
+            font-weight: 700;
+            
+            display: flex;
+            justify-content: space-between;
+            background-color: $base-bg;
+            padding: 40px 31px;
+            text-align: right;
+            width: 560px;
+            @media (max-width: 376px){
+                width: 100%;
+                margin-right: 0;
+
+            }
+        }
+        &__link::after{
+            content: url('./../img/arrow.svg');
+        }
+    }
+}
 .li__line-through{
     text-decoration: line-through;
 }
 .footer{
+    color: #FBF6F6;
     background-color: #3C2A2A;
     padding: 143px 140px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    &__block{
+        display: flex;
+        gap: 17px;
+        flex-direction: column;
+
+        &__contacts{
+            display: flex;
+            gap: 17px;
+        }
+    }
+}
+.center{
+    text-align: center;
+}
+.right{
+    text-align: right;
 }
