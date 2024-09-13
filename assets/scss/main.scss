@@ -123,7 +123,13 @@ li{
             flex-wrap: wrap;
             
         }
-
+        &__null-lvl{
+            margin-left: 100px;
+            
+            @media (max-width: 376px) {
+                margin-left: 0;
+            }
+        }
         &__title{
             text-align: left;
             font-size: 80px;

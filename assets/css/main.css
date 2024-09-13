@@ -121,6 +121,14 @@ li {
     flex-wrap: wrap;
   }
 }
+.landing__block__null-lvl {
+  margin-left: 100px;
+}
+@media (max-width: 376px) {
+  .landing__block__null-lvl {
+    margin-left: 0;
+  }
+}
 .landing__block__title {
   text-align: left;
   font-size: 80px;
